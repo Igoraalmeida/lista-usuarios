@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body{
+  margin: 0;
+  font-family: 'Google Sans', sans-serif;
+  
+}
+#root {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.search-bar{
+  position: relative;
+}
+.search-icon{
+  position: absolute;
+  color:rgba(245, 245, 245, 0.664);
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search-bar input{
+  margin: 20px;
+  padding: 7px 15vh 7px 35px;
+  text-align: left;
+  font-size: 1.1em;
+  border: 1.5px solid #cccccc77;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.425);
+  background-color: #ffffff42;
+}
+.search-bar input::placeholder{
+  color: rgba(245, 245, 245, 0.664);
+}
+.user-card{
+  margin: 20px;
+  padding: 30px;
+  display: inline-block;
+  text-align: left;
+  min-width: 350px;
+  border: 1.5px solid #cccccc77;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.425);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #ffffff42;
+}
+.user-card:hover{
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.575);
+  transform: translateY(-5px);
+  transform: scale(1.05);
+}
+.user-card .text-name,
+.user-card .text-email,
+.user-card .text-address {
+  font-size: 1em;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  padding-top: 5px;
+}
+.user-line{
+  position: relative;
+}
+.user-icon,
+.email-icon, 
+.address-icon{
+  position: absolute;
+  top: 4px;
+  left: -18px;
+  font-size: 1.6em;
+  color: #00000079;
+}
