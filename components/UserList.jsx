@@ -4,22 +4,38 @@ import UserCard from './UserCard';
 function UserList({ search }) {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const filteredUsers = users.filter(user =>
   user.name.toLowerCase().includes(search.toLowerCase())
 )
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(data => {
+    async function fetchUsers(){
+      try{
+        const res = await fetch('https://jsonplaceholder.typicode.com/users');
+        const data = await res.json();
+
         setUsers(data);
         setLoading(false);
-      });
+
+      } catch (error) {
+
+        console.error('Erro ao buscar usuários:', error);
+
+      }
+      
+    }
+    
+    fetchUsers();
+      
   }, []);
 
   if (loading) {
     return <p>Carregando usuários...</p>;
+  }
+  if (error) {
+    return <p>Erro ao carregar usuários.</p>;
   }
 
   return (
