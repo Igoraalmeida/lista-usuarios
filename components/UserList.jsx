@@ -7,7 +7,9 @@ function UserList({ search }) {
   const [error, setError] = useState(null);
 
   const filteredUsers = users.filter(user =>
-  user.name.toLowerCase().includes(search.toLowerCase())
+  user.name.toLowerCase().includes(search.toLowerCase()) ||
+  user.email.toLowerCase().includes(search.toLowerCase())||
+  user.address.city.toLowerCase().includes(search.toLowerCase())
 )
 
   useEffect(() => {
@@ -20,9 +22,7 @@ function UserList({ search }) {
         setLoading(false);
 
       } catch (error) {
-
-        console.error('Erro ao buscar usuários:', error);
-
+        console.error('This page was not possible to render the users:', error);
       }
       
     }
@@ -32,10 +32,10 @@ function UserList({ search }) {
   }, []);
 
   if (loading) {
-    return <p>Carregando usuários...</p>;
+    return <p>Loading Users...</p>;
   }
   if (error) {
-    return <p>Erro ao carregar usuários.</p>;
+    return <p>Error to load users.</p>;
   }
 
   return (

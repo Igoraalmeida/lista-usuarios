@@ -7,7 +7,7 @@ function UserCard({ user }) {
     <div className="user-card">
       <div className="user-line">
         <FaUserCircle className="user-icon" />
-        <p className="text-name"><strong>Nome:</strong> {user.name}</p>
+        <p className="text-name"><strong>Name:</strong> {user.name}</p>
       </div>
 
       <div className="user-line">
@@ -17,7 +17,7 @@ function UserCard({ user }) {
 
       <div className="user-line">
         <FaMapMarkerAlt className="address-icon" />
-        <p className="text-address"><strong>Cidade:</strong> {user.address.city}</p>
+        <p className="text-address"><strong>City:</strong> {user.address.city}</p>
       </div>
     </div>
   );

@@ -9,8 +9,10 @@ function App() {
 
   return (
      <div className='container'>
-      <h1>Lista de Usuários</h1>
+      <h1>Users List</h1>
+      
       <Search search={search} setSearch={setSearch} />
+      
       <UserList search={search} />
     </div>
   )

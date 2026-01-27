@@ -6,7 +6,7 @@ function Search({ search, setSearch }) {
       <FaSearch className="search-icon" />
       <input
         type="text"
-        placeholder="Pesquisar usuários..."
+        placeholder="Search users..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
