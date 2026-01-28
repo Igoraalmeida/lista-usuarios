@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import UserList from '../components/UserList.jsx'
 import Search from '../components/Search.jsx'
+import Footer from '../components/Footer.jsx'
 import './App.css'
+
 
 function App() {
 
@@ -14,6 +16,8 @@ function App() {
       <Search search={search} setSearch={setSearch} />
       
       <UserList search={search} />
+
+      <Footer/>
     </div>
   )
 }
