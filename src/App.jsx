@@ -16,7 +16,7 @@ function App() {
       <Search search={search} setSearch={setSearch} />
       
       <UserList search={search} />
-
+    
       <Footer/>
     </div>
   )
