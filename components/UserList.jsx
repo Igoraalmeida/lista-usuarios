@@ -43,6 +43,10 @@ function UserList({ search }) {
       {filteredUsers.map(user => (
         <UserCard key={user.id} user={user} />
       ))}
+
+      {filteredUsers.length === 0 &&(
+        <p>Nothing here... Plese, try it again</p>
+      )}
     </div>
   );
 }

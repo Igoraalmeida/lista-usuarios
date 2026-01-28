@@ -10,6 +10,8 @@ function Search({ search, setSearch }) {
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
+
+      <button onClick={() => setSearch('')}>Clean</button>
     </div>
   );
 }
